@@ -28,6 +28,14 @@ describe('Merge function', function(){
 });
 
 describe('mergeSort function', function(){
+    it('is able to mergeSort an empty array', function(){
+      const arr = [];
+      expect(mergeSort(arr)).to.eql([]);
+    });
+    it('is able to mergeSort an array of size 1', function(){
+      const arr = [5];
+      expect(mergeSort(arr)).to.eql([5]);
+    });
     it('is able to mergeSort an array', function(){
       const arr = [0, 5, 4, 1];
       expect(mergeSort(arr)).to.eql([0, 1, 4, 5]);
